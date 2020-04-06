@@ -1,0 +1,4 @@
+start
+start
+slurmstepd: error: *** JOB 8691831 ON sfr11 CANCELLED AT 2020-03-23T21:35:14 ***
+slurmstepd: error: *** JOB 8691826 ON sfr8 CANCELLED AT 2020-03-28T00:56:44 DUE TO TIME LIMIT ***

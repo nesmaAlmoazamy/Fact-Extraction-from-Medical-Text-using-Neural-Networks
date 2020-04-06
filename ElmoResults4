@@ -1,0 +1,102 @@
+start
+Collecting anaconda
+Installing collected packages: anaconda
+ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages/anaconda-0.0.1.1.dist-info'
+Consider using the `--user` option or check the permissions.
+
+WARNING: You are using pip version 19.2.2, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+
+CondaValueError: prefix already exists: /gpfs/hpc/home/mahmoud/.conda/envs/myenv3.5
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+If your shell is Bash or a Bourne variant, enable conda for the current user with
+
+    $ echo ". /storage/software/python-3.6.3/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc
+
+or, for all users, enable conda with
+
+    $ sudo ln -s /storage/software/python-3.6.3/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+
+The options above will permanently enable the 'conda' command, but they do NOT
+put conda's base (root) environment on PATH.  To do so, run
+
+    $ conda activate
+
+in your terminal, or to put the base environment on PATH permanently, run
+
+    $ echo "conda activate" >> ~/.bashrc
+
+Previous to conda 4.4, the recommended way to activate conda was to modify PATH in
+your ~/.bashrc file.  You should manually remove the line that looks like
+
+    export PATH="/storage/software/python-3.6.3/miniconda3/bin:$PATH"
+
+^^^ The above line should NO LONGER be in your ~/.bashrc file! ^^^
+
+
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.4.11
+  latest version: 4.8.3
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+
+# All requested packages already installed.
+
+install_TF
+Collecting tensorflow-gpu==1.2
+  Using cached https://files.pythonhosted.org/packages/cb/4d/c9c4da41c6d7b9a4949cb9e53c7032d7d9b7da0410f1226f7455209dd962/tensorflow_gpu-1.2.0-cp36-cp36m-manylinux1_x86_64.whl
+Requirement already satisfied: h5py in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (2.9.0)
+Requirement already satisfied: wheel>=0.26 in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from tensorflow-gpu==1.2) (0.30.0)
+Collecting backports.weakref==1.0rc1 (from tensorflow-gpu==1.2)
+  Using cached https://files.pythonhosted.org/packages/6a/f7/ae34b6818b603e264f26fe7db2bd07850ce331ce2fde74b266d61f4a2d87/backports.weakref-1.0rc1-py3-none-any.whl
+Requirement already satisfied: protobuf>=3.2.0 in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from tensorflow-gpu==1.2) (3.7.1)
+Collecting bleach==1.5.0 (from tensorflow-gpu==1.2)
+  Using cached https://files.pythonhosted.org/packages/33/70/86c5fec937ea4964184d4d6c4f0b9551564f821e1c3575907639036d9b90/bleach-1.5.0-py2.py3-none-any.whl
+Collecting markdown==2.2.0 (from tensorflow-gpu==1.2)
+Collecting html5lib==0.9999999 (from tensorflow-gpu==1.2)
+Requirement already satisfied: six>=1.10.0 in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from tensorflow-gpu==1.2) (1.12.0)
+Requirement already satisfied: werkzeug>=0.11.10 in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from tensorflow-gpu==1.2) (0.14.1)
+Requirement already satisfied: numpy>=1.11.0 in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from tensorflow-gpu==1.2) (1.16.1)
+Requirement already satisfied: setuptools in /storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages (from protobuf>=3.2.0->tensorflow-gpu==1.2) (36.5.0.post20170921)
+ERROR: tensorboard 1.13.1 has requirement markdown>=2.6.8, but you'll have markdown 2.2.0 which is incompatible.
+Installing collected packages: backports.weakref, html5lib, bleach, markdown, tensorflow-gpu
+ERROR: Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/storage/software/python-3.6.3/miniconda3/lib/python3.6/site-packages/backports'
+Consider using the `--user` option or check the permissions.
+
+WARNING: You are using pip version 19.2.2, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+LoadFile
+runsetupfile
+finishsetupfile
+Collecting bilm
+  Using cached https://files.pythonhosted.org/packages/22/a6/711e6ea5a05f7ce72f0a5c6c3bfbd1451aeb8810c9ec8074d5667e3ff433/bilm-0.1.post5-py3-none-any.whl
+Requirement already satisfied: h5py in /storage/software/python/3.6.3/virtenv/lib/python3.6/site-packages (from bilm) (2.9.0)
+Requirement already satisfied: numpy>=1.7 in /storage/software/python/3.6.3/virtenv/lib/python3.6/site-packages (from h5py->bilm) (1.16.2)
+Requirement already satisfied: six in /storage/software/python/3.6.3/virtenv/lib/python3.6/site-packages (from h5py->bilm) (1.10.0)
+Installing collected packages: bilm
+Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/storage/software/python/3.6.3/plain/lib/python3.6/site-packages/bilm'
+Consider using the `--user` option or check the permissions.
+
+You are using pip version 18.0, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Traceback (most recent call last):
+  File "bin/train_elmo.py", line 75, in <module>
+    main(args)
+  File "bin/train_elmo.py", line 14, in main
+    vocab = load_vocab(args.vocab_file, 3413734)
+  File "/gpfs/hpc/home/mahmoud/Thesis/bilm/training.py", line 1060, in load_vocab
+    validate_file=True)
+  File "/gpfs/hpc/home/mahmoud/Thesis/bilm/data.py", line 117, in __init__
+    super(UnicodeCharsVocabulary, self).__init__(filename, **kwargs)
+  File "/gpfs/hpc/home/mahmoud/Thesis/bilm/data.py", line 47, in __init__
+    raise ValueError("Ensure the vocabulary file has "
+ValueError: Ensure the vocabulary file has <S>, </S>, <UNK> tokens
