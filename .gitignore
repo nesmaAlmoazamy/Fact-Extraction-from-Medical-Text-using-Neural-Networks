@@ -27,3 +27,4 @@ sentencesAll.txt
 ner-CNN-bi-lstm-model-5000-0.99.hdf5
 DataAnnotatedSubset150SentenceLength.csv
 tokenizer.pkl
+RaivoSubset150SentenceLength.csv
