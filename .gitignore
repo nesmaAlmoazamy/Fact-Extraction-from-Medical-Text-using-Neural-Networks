@@ -30,3 +30,6 @@ tokenizer.pkl
 RaivoSubset150SentenceLength.csv
 Untitled2.ipynb
 swb_weights.hdf5
+FR_ObjectSubset150SentenceLength.csv
+*.csv
+thesis_template_for_word_2019.dotx
