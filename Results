@@ -2,3 +2,21 @@ start
 start
 slurmstepd: error: *** JOB 8691831 ON sfr11 CANCELLED AT 2020-03-23T21:35:14 ***
 slurmstepd: error: *** JOB 8691826 ON sfr8 CANCELLED AT 2020-03-28T00:56:44 DUE TO TIME LIMIT ***
+
+
+
+{FIXED DATETRUNC('month', [Order Date]): MAX([Order Date])}
+
+DATETRUNC('day', [Date Payment Admin] )
+
+
+
+IF (ATTR([Code]) = LOOKUP(ATTR([Code]),-1) AND ATTR([Total Amount Due]) = LOOKUP(ATTR([Total Amount Due]),-1)) 
+
+then 0 else 1 END
+
+
+
+SUM({ EXCLUDE [Cash Type], DATETRUNC('day', [Date Payment]): SUM([Amount])})
+
+SUM([actual_return (loan)])/COUNTD(MONTH([date_repaid]))
