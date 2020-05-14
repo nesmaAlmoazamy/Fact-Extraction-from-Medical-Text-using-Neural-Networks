@@ -34,3 +34,4 @@ FR_ObjectSubset150SentenceLength.csv
 *.csv
 thesis_template_for_word_2019.dotx
 *.pickle
+*.hdf5
