@@ -41,3 +41,9 @@ thesis_template_for_word_2019.dotx
 *.pickle
 *.hdf5
 SQLQUERY
+(Model 2) wordEmbedding_AllObjects-Copy1.ipynb
+(Model 2) wordEmbedding_AllObjects.ipynb
+.ipynb_checkpoints/(Experiment 7) FR_Test_Character_Embedding -Copy1-checkpoint.ipynb
+.ipynb_checkpoints/(Model 2) wordEmbedding_AllObjects-checkpoint.ipynb
+.ipynb_checkpoints/(Model 2) wordEmbedding_AllObjects-Copy1-checkpoint.ipynb
+AllObjects.png
